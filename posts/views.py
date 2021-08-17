@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from datetime import datetime
 
 # model
-from posts.models import User
+#from posts.models import User
 
 posts = [
     {
@@ -15,8 +15,9 @@ posts = [
     }
 ]
 
+
 def list_posts(request):
-    user = User(name = 'test',passsword = '123',surname = 'bgf')
-    user.save()
-    print(user)
+    # user = User(name='test', passsword='123', surname='bgf')
+    # user.save()
+    # print(user)
     return render(request, 'feed.html', {'posts': posts})
